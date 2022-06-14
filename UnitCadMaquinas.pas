@@ -150,13 +150,12 @@ begin
    close;
    if id <> '' then
    begin
-
-            sql.text := 'UPDATE maquinas SET lider = '        +edLIDER.Text            +
+            sql.text := 'UPDATE maquinas SET lider = '        +QuotedStr(edLIDER.Text) +
                                           ', setor = '        +QuotedStr(cbSETOR.Text) +
-                                          ', observacao = '   +mOBS.Text               +
+                                          ', observacao = '   +QuotedStr(mOBS.Text)    +
                                           ', cod_maq = '      +QuotedStr(edID.Text)    +
                                           ', cad_data = '     +QuotedStr(edData.text)  +
-                                          ', tipo = '        +QuotedStr(cbTipo.Text) +
+                                          ', tipo = '        +QuotedStr(cbTipo.Text)   +
                                           ' WHERE id = '      +id;
    end
    else

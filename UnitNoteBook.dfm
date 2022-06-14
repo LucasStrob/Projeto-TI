@@ -79,19 +79,14 @@ object FormNoteBook: TFormNoteBook
         Height = 394
         Align = alLeft
         TabOrder = 0
+        ExplicitLeft = 0
+        ExplicitTop = 6
         object lblSetor: TLabel
           Left = 32
           Top = 5
           Width = 26
           Height = 13
           Caption = 'Setor'
-        end
-        object lblQuantidadeNot: TLabel
-          Left = 33
-          Top = 296
-          Width = 129
-          Height = 13
-          Caption = 'Quantidade de Notebooks:'
         end
         object cbSetorNotebook: TComboBox
           Left = 32
@@ -181,13 +176,38 @@ object FormNoteBook: TFormNoteBook
             ExplicitTop = 2
           end
         end
-        object edQuantidade: TEdit
-          Left = 168
-          Top = 293
-          Width = 143
-          Height = 21
-          Enabled = False
+        object pnlRelatorio: TPanel
+          Left = 72
+          Top = 301
+          Width = 185
+          Height = 41
+          Caption = 'Gerar Relat'#243'rio'
+          Color = clLime
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentBackground = False
+          ParentFont = False
           TabOrder = 3
+          object btnRelatorio: TSpeedButton
+            Left = 1
+            Top = 1
+            Width = 183
+            Height = 39
+            Cursor = crHandPoint
+            Align = alClient
+            Flat = True
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -19
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            ExplicitLeft = 0
+            ExplicitHeight = 16
+          end
         end
       end
       object pnlDireita: TPanel

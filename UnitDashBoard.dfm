@@ -40,8 +40,8 @@ object FormDashBoard: TFormDashBoard
       TabOrder = 0
       OnClick = pnlTopoClick
       object Label1: TLabel
-        Left = 129
-        Top = 12
+        Left = 128
+        Top = 10
         Width = 204
         Height = 19
         Caption = 'Vis'#227'o Geral de Cadastros'
@@ -106,7 +106,7 @@ object FormDashBoard: TFormDashBoard
           Align = alClient
           Flat = True
           OnClick = btnAtualizarClick
-          ExplicitLeft = 0
+          ExplicitLeft = 8
           ExplicitTop = -2
         end
       end
@@ -131,6 +131,7 @@ object FormDashBoard: TFormDashBoard
           Top = 1
           Width = 113
           Height = 37
+          Cursor = crHandPoint
           Align = alClient
           Flat = True
           OnClick = btnEditarClick
@@ -159,6 +160,7 @@ object FormDashBoard: TFormDashBoard
           Top = 1
           Width = 113
           Height = 37
+          Cursor = crHandPoint
           Align = alClient
           Flat = True
           OnClick = btnExcluirClick
@@ -203,6 +205,11 @@ object FormDashBoard: TFormDashBoard
           item
             Expanded = False
             FieldName = 'cod_maq'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
             Title.Caption = 'C'#211'DIGO'
             Width = 110
             Visible = True
@@ -224,7 +231,7 @@ object FormDashBoard: TFormDashBoard
           item
             Expanded = False
             FieldName = 'lider'
-            Title.Caption = 'LIDER'
+            Title.Caption = 'RESPONS'#193'VEL'
             Width = 138
             Visible = True
           end

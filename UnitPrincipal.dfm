@@ -15,6 +15,7 @@ object FormPrincipal: TFormPrincipal
   Menu = MainMenu1
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object pnlFull: TPanel
@@ -36,57 +37,115 @@ object FormPrincipal: TFormPrincipal
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
-      object btnDashBoard: TSpeedButton
-        Left = 0
-        Top = 8
-        Width = 130
-        Height = 97
-        Cursor = crHandPoint
-        Caption = 'Lista'
-        Flat = True
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -15
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentFont = False
-        ParentShowHint = False
-        ShowHint = True
-        OnClick = btnDashBoardClick
-      end
-      object btnCadastro: TSpeedButton
-        Left = -4
-        Top = 142
+      object pnlContato: TPanel
+        Left = 1
+        Top = 303
         Width = 134
-        Height = 130
-        Cursor = crHandPoint
-        Caption = 'Cadastro'
-        Flat = True
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -15
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentFont = False
-        ParentShowHint = False
-        ShowHint = False
-        OnClick = btnCadastroClick
-      end
-      object btnContato: TSpeedButton
-        Left = 0
-        Top = 312
-        Width = 130
-        Height = 97
-        Cursor = crHandPoint
+        Height = 151
+        Align = alTop
         Caption = 'Pesquisar'
-        Flat = True
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -15
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
-        OnClick = btnContatoClick
+        TabOrder = 0
+        ExplicitLeft = -24
+        ExplicitTop = 208
+        ExplicitWidth = 185
+        object btnContato: TSpeedButton
+          Left = 1
+          Top = 1
+          Width = 132
+          Height = 149
+          Cursor = crHandPoint
+          Align = alClient
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+          OnClick = btnContatoClick
+          ExplicitLeft = -3
+          ExplicitTop = 5
+        end
+      end
+      object pnlCadastro: TPanel
+        Left = 1
+        Top = 152
+        Width = 134
+        Height = 151
+        Align = alTop
+        Caption = 'Cadastro'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 1
+        ExplicitLeft = 2
+        ExplicitTop = 9
+        object btnCadastro: TSpeedButton
+          Left = 1
+          Top = 1
+          Width = 132
+          Height = 149
+          Cursor = crHandPoint
+          Align = alClient
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+          ParentShowHint = False
+          ShowHint = False
+          OnClick = btnCadastroClick
+          ExplicitLeft = -3
+          ExplicitTop = -3
+        end
+      end
+      object pnlDashBoard: TPanel
+        Left = 1
+        Top = 1
+        Width = 134
+        Height = 151
+        Align = alTop
+        Caption = 'Lista'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 2
+        ExplicitLeft = 2
+        ExplicitTop = 9
+        object btnDashBoard: TSpeedButton
+          Left = 1
+          Top = 1
+          Width = 132
+          Height = 149
+          Cursor = crHandPoint
+          Align = alClient
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
+          OnClick = btnDashBoardClick
+          ExplicitLeft = -3
+          ExplicitTop = -3
+        end
       end
     end
     object Panel1: TPanel

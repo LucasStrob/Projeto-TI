@@ -35,6 +35,7 @@ type
     { Private declarations }
   public
     { Public declarations }
+    id:string;
   end;
 
 var
@@ -92,10 +93,15 @@ begin
   begin
     dm.dsMaq.Edit;
     id := dm.qMaq.FieldByName('id').AsString;
+    edID.Text := dm.qMaq.FieldByName('cod_maq').AsString;
+    edLider.Text := dm.qMaq.FieldByName('lider').AsString;
+    mOBS.Text := dm.qMaq.FieldByName('observacao').AsString;
     if ShowModal = mrOK then
     pegadados;
-  end;
+    end;
 end;
+
+
 
 
 //-------------------------------BOTÃO EXCLUIR----------------------------------

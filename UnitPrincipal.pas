@@ -25,11 +25,15 @@ type
     Sair2: TMenuItem;
     PCs1: TMenuItem;
     Desktop1: TMenuItem;
+    pnlContato: TPanel;
+    pnlCadastro: TPanel;
+    pnlDashBoard: TPanel;
     procedure btnCadastroClick(Sender: TObject);
     procedure btnDashBoardClick(Sender: TObject);
     procedure btnContatoClick(Sender: TObject);
     procedure Sair2Click(Sender: TObject);
     procedure PCs1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -84,6 +88,8 @@ begin
     FormDashBoard.Show
   end;
 end;
+
+
 
 
 procedure TFormPrincipal.PCs1Click(Sender: TObject);
@@ -143,6 +149,13 @@ with Control do
     SetWindowRgn(Handle, rgn, True);
     Invalidate;
   end;
+end;
+
+procedure TFormPrincipal.FormShow(Sender: TObject);
+begin
+ makerounded(pnlCadastro);
+ makerounded(pnlDashBoard);
+ makerounded(pnlContato);
 end;
 
 end.

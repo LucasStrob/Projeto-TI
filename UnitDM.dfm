@@ -66,7 +66,7 @@ object DM: TDM
     CursorType = ctStatic
     Parameters = <>
     SQL.Strings = (
-      'select setor from maquinas')
+      'SELECT setor FROM maquinas')
     Left = 408
     Top = 200
     object qNotsetor: TStringField

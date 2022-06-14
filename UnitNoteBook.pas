@@ -22,8 +22,8 @@ type
     DBGrid1: TDBGrid;
     pnlPesquisar: TPanel;
     btnPesquisar: TSpeedButton;
-    lblQuantidadeNot: TLabel;
-    edQuantidade: TEdit;
+    pnlRelatorio: TPanel;
+    btnRelatorio: TSpeedButton;
     procedure btnFecharClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure PegaDados;
@@ -83,7 +83,8 @@ begin
 	    with dm.qMaq do
 	    begin
 		    close;
-		    sql.text := 'select setor from maquinas where setor = '+ cbSetorNotebook.Text;
+		    sql.text := 'select * from maquinas where setor = '+ QuotedStr(cbSetorNotebook.Text)+
+                                                          'AND tipo =  ''NoteBook''';
         open;
 	    end;
 	end;
@@ -114,6 +115,7 @@ begin
   makerounded(pnlFechar);
   makerounded(pnlTop);
   makerounded(pnlPesquisar);
+  makerounded(pnlRelatorio);
   PegaDados;
 end;
 
@@ -124,7 +126,7 @@ begin
    with dm.qMaq do
    begin
      close;
-     sql.Text := 'Select * from maquinas';
+     sql.Text := 'SELECT * FROM maquinas WHERE tipo = ''NoteBook''';
      open;
    end;
 
