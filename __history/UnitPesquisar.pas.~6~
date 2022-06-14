@@ -1,0 +1,104 @@
+unit UnitPesquisar;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
+  Data.DB, Vcl.DBCtrls, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TFormPesquisar = class(TForm)
+    pnlFull: TPanel;
+    pnlTopo: TPanel;
+    pnlEdit: TPanel;
+    edPesquisar: TEdit;
+    pnlFechar: TPanel;
+    btnFechar: TSpeedButton;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    DBGrid1: TDBGrid;
+    DBMemo1: TDBMemo;
+    pnlAtualizar: TPanel;
+    SpeedButton1: TSpeedButton;
+    pnlPesquisar: TPanel;
+    SpeedButton2: TSpeedButton;
+    procedure btnFecharClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure pegadados;
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormPesquisar: TFormPesquisar;
+
+implementation
+
+{$R *.dfm}
+
+uses UnitDM;
+
+procedure MakeRounded(Control: TWinControl);
+var
+  R: TRect;
+  Rgn: HRGN;
+begin
+with Control do
+  begin
+  R := ClientRect;
+  rgn := CreateRoundRectRgn(R.Left, R.Top, R.Right, R.Bottom, 20, 20);
+  Perform(EM_GETRECT, 0, lParam(@r));
+  InflateRect(r, - 5, - 5);
+  Perform(EM_SETRECTNP, 0, lParam(@r));
+  SetWindowRgn(Handle, rgn, True);
+  Invalidate;
+  end;
+end;
+
+procedure TFormPesquisar.btnFecharClick(Sender: TObject);
+begin
+ close;
+end;
+
+
+
+
+
+
+procedure TFormPesquisar.FormShow(Sender: TObject);
+begin
+ makerounded(pnlFechar);
+ makerounded(pnlTopo);
+ makerounded(pnlAtualizar);
+ makerounded(pnlPesquisar);
+ makerounded(pnlEdit);
+end;
+
+procedure TFormPesquisar.PegaDados;
+begin
+  close;
+  with dm.qMaq do
+  begin
+    close;
+    sql.text := 'SELECT * FROM maquinas';
+    open;
+    FormPesquisar.Show;
+  end;
+end;
+
+procedure TFormPesquisar.SpeedButton1Click(Sender: TObject);
+begin
+ pegaDados;
+end;
+
+procedure TFormPesquisar.SpeedButton2Click(Sender: TObject);
+begin
+  dm.qMaq.Fieldbyname('id');
+end;
+
+end.

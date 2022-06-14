@@ -1,0 +1,62 @@
+unit UnitNoteBook;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  TFormNoteBook = class(TForm)
+    pnlFull: TPanel;
+    pnlTop: TPanel;
+    pnlMenu: TPanel;
+    pnlFechar: TPanel;
+    btnFechar: TSpeedButton;
+    procedure btnFecharClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormNoteBook: TFormNoteBook;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormNoteBook.btnFecharClick(Sender: TObject);
+begin
+  close;
+end;
+
+//---------------------------ESTILO ARREDONDADO---------------------------------
+procedure MakeRounded(Control: TWinControl);
+var
+  R: TRect;
+  Rgn: HRGN;
+begin
+with Control do
+  begin
+    R := ClientRect;
+    rgn := CreateRoundRectRgn(R.Left, R.Top, R.Right, R.Bottom, 20, 20);
+    Perform(EM_GETRECT, 0, lParam(@r));
+    InflateRect(r, - 5, - 5);
+    Perform(EM_SETRECTNP, 0, lParam(@r));
+    SetWindowRgn(Handle, rgn, True);
+    Invalidate;
+  end;
+end;
+
+
+
+procedure TFormNoteBook.FormShow(Sender: TObject);
+begin
+  makerounded(pnlFechar);
+  makerounded(pnlTop);
+end;
+
+end.

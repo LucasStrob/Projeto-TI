@@ -1,0 +1,31 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 626
+  Width = 863
+  object conexao: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Password=lio456;Persist Security Info=True;U' +
+      'ser ID=sa;Initial Catalog=principal;Data Source=(local)\sqlexpre' +
+      'ss;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4' +
+      '096;Workstation ID=DESKTOP-1SBDJKS;Use Encryption for Data=False' +
+      ';Tag with column collation when possible=False'
+    LoginPrompt = False
+    Provider = 'SQLOLEDB.1'
+    Left = 200
+    Top = 200
+  end
+  object dsMaq: TDataSource
+    DataSet = qMaq
+    Left = 288
+    Top = 272
+  end
+  object qMaq: TADOQuery
+    Connection = conexao
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM maquinas')
+    Left = 288
+    Top = 200
+  end
+end
