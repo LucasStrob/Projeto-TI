@@ -51,9 +51,6 @@ object FormPrincipal: TFormPrincipal
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = -24
-        ExplicitTop = 208
-        ExplicitWidth = 185
         object btnContato: TSpeedButton
           Left = 1
           Top = 1
@@ -87,8 +84,6 @@ object FormPrincipal: TFormPrincipal
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 1
-        ExplicitLeft = 2
-        ExplicitTop = 9
         object btnCadastro: TSpeedButton
           Left = 1
           Top = 1
@@ -124,8 +119,6 @@ object FormPrincipal: TFormPrincipal
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 2
-        ExplicitLeft = 2
-        ExplicitTop = 9
         object btnDashBoard: TSpeedButton
           Left = 1
           Top = 1
@@ -653,6 +646,8 @@ object FormPrincipal: TFormPrincipal
       Color = clWhite
       ParentBackground = False
       TabOrder = 2
+      ExplicitLeft = 141
+      ExplicitTop = 113
       object Image1: TImage
         Left = 216
         Top = 167

@@ -3,8 +3,9 @@ object FormCadMaq: TFormCadMaq
   Top = 0
   ActiveControl = edID
   BorderIcons = []
-  ClientHeight = 446
-  ClientWidth = 686
+  BorderStyle = bsSingle
+  ClientHeight = 456
+  ClientWidth = 696
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,8 +20,8 @@ object FormCadMaq: TFormCadMaq
   object pnlFull: TPanel
     Left = 0
     Top = 0
-    Width = 686
-    Height = 446
+    Width = 696
+    Height = 456
     Align = alClient
     Color = clWhite
     Font.Charset = DEFAULT_CHARSET
@@ -31,6 +32,8 @@ object FormCadMaq: TFormCadMaq
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 686
+    ExplicitHeight = 446
     object Image3: TImage
       Left = 40
       Top = 231
@@ -561,7 +564,7 @@ object FormCadMaq: TFormCadMaq
     object pnlTOP: TPanel
       Left = 1
       Top = 1
-      Width = 684
+      Width = 694
       Height = 41
       Align = alTop
       Caption = 'Cadastro de M'#225'quinas'
@@ -572,8 +575,9 @@ object FormCadMaq: TFormCadMaq
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 684
       object pnlExit: TPanel
-        Left = 568
+        Left = 578
         Top = 1
         Width = 115
         Height = 39
@@ -587,6 +591,7 @@ object FormCadMaq: TFormCadMaq
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
+        ExplicitLeft = 568
         object btnFechar: TSpeedButton
           Left = 1
           Top = 1

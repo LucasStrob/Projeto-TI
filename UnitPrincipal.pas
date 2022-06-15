@@ -5,7 +5,9 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons,
-  Vcl.Imaging.pngimage, Vcl.Menus;
+  Vcl.Imaging.pngimage, Vcl.Menus, WebView2, Winapi.ActiveX, Vcl.Edge,
+  VclTee.TeeGDIPlus, VCLTee.TeEngine, VCLTee.Series, VCLTee.TeeProcs,
+  VCLTee.Chart;
 
 type
   TFormPrincipal = class(TForm)

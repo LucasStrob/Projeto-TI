@@ -79,8 +79,6 @@ object FormNoteBook: TFormNoteBook
         Height = 394
         Align = alLeft
         TabOrder = 0
-        ExplicitLeft = 0
-        ExplicitTop = 6
         object lblSetor: TLabel
           Left = 32
           Top = 5

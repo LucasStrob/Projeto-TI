@@ -209,7 +209,7 @@ object FormDashBoard: TFormDashBoard
             Font.Color = clWindowText
             Font.Height = -11
             Font.Name = 'Tahoma'
-            Font.Style = [fsBold]
+            Font.Style = []
             Title.Caption = 'C'#211'DIGO'
             Width = 110
             Visible = True

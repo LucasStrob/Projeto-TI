@@ -87,6 +87,7 @@ begin
                                                           'AND tipo =  ''NoteBook''';
         open;
 	    end;
+
 	end;
 end;
 
